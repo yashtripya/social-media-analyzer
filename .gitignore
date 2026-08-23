@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Build & Output Artifacts
+frontend/dist/
+dist/
+build/
+*.pdf
+test_output.pdf
+
+# Environment & Sensitive Configuration
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Database & Local Data
+*.db
+*.sqlite
+*.sqlite3
+backend/analyzer.db
+
+# IDE & OS Temporary Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
