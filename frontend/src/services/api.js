@@ -1,4 +1,11 @@
-const API_BASE = '/api';
+const getApiBase = () => {
+  const envUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE;
+  if (!envUrl) return '/api';
+  const clean = envUrl.replace(/\/$/, '');
+  return clean.endsWith('/api') ? clean : `${clean}/api`;
+};
+
+const API_BASE = getApiBase();
 
 export async function checkHealth() {
   const res = await fetch(`${API_BASE}/health`);
